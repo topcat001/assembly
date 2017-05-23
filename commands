@@ -1,0 +1,6 @@
+nasm -f elf64 echo_args_hex.asm
+ld -s -o echo_args_hex echo_args_hex.o
+
+For debugging:
+nasm -f elf64 -F dwarf -g pinhole.asm # Note dwarf is needed for gdb
+ld -o pinhole pinhole.o
